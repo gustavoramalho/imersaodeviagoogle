@@ -71,6 +71,18 @@ python3 --version
 
 ---
 
+## 🧪 Como Executar os Testes Automatizados
+
+O projeto conta com uma suíte de testes unitários utilizando o módulo nativo `unittest` do Python.
+
+Para rodar todos os testes, execute no terminal:
+
+```bash
+python3 -m unittest -v test_calculadora.py
+```
+
+---
+
 ## 🎓 Contexto: Imersão Alura + Google
 
 Este repositório foi construído durante a **Imersão Engenharia de Software: Dev na Era da IA**, promovida pela [Alura](https://www.alura.com.br/) em parceria com o [Google](https://about.google/). A imersão aborda a integração de ferramentas de Inteligência Artificial moderna no fluxo de trabalho de desenvolvimento de software, acelerando o aprendizado e a produtividade no código.
