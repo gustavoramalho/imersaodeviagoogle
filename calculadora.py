@@ -18,6 +18,10 @@ def dividir(a, b):
         return "Erro: Não é possível dividir por zero!"
     return a / b
 
+def porcentagem(valor, taxa):
+    """Retorna a porcentagem de um valor. Ex: 15% de 200 = 30."""
+    return (valor * taxa) / 100
+
 def calculadora():
     print("=" * 30)
     print("      CALCULADORA SIMPLES     ")
@@ -29,18 +33,23 @@ def calculadora():
         print("2 - Subtração (-)")
         print("3 - Multiplicação (*)")
         print("4 - Divisão (/)")
+        print("5 - Porcentagem (%)")
         print("0 - Sair")
         
-        opcao = input("Digite o número da operação (0 a 4): ")
+        opcao = input("Digite o número da operação (0 a 5): ")
         
         if opcao == "0":
             print("\nObrigado por usar a calculadora! Até logo.")
             break
             
-        if opcao in ("1", "2", "3", "4"):
+        if opcao in ("1", "2", "3", "4", "5"):
             try:
-                num1 = float(input("Digite o primeiro número: "))
-                num2 = float(input("Digite o segundo número: "))
+                if opcao == "5":
+                    num1 = float(input("Digite o valor base: "))
+                    num2 = float(input("Digite a porcentagem (%): "))
+                else:
+                    num1 = float(input("Digite o primeiro número: "))
+                    num2 = float(input("Digite o segundo número: "))
             except ValueError:
                 print("Entrada inválida! Certifique-se de digitar números válidos.")
                 continue
@@ -60,8 +69,11 @@ def calculadora():
                     print(resultado)
                 else:
                     print(f"Resultado: {num1} / {num2} = {resultado}")
+            elif opcao == "5":
+                resultado = porcentagem(num1, num2)
+                print(f"Resultado: {num2}% de {num1} = {resultado}")
         else:
-            print("Opção inválida! Escolha um valor entre 0 e 4.")
+            print("Opção inválida! Escolha um valor entre 0 e 5.")
 
 # Executa o programa principal
 if __name__ == "__main__":

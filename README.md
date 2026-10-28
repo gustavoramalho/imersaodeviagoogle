@@ -16,6 +16,7 @@ Este projeto consiste em uma calculadora interativa via linha de comando (CLI) d
 - ➖ **Subtração** (`-`)
 - ✖️ **Multiplicação** (`*`)
 - ➗ **Divisão** (`/`)
+- 🔢 **Porcentagem** (`%`)
 - 🛡️ **Tratamento de divisão por zero**: Evita erros matemáticos informando o usuário com mensagem amigável.
 - 🔍 **Validação de entrada**: Proteção contra digitação de valores não numéricos com `try/except`.
 - 🔁 **Menu interativo em loop**: Permite realizar múltiplas operações consecutivas até escolher a opção de sair (`0`).
@@ -52,8 +53,8 @@ python3 --version
    *(No Windows, você também pode usar: `python calculadora.py`)*
 
 3. **Interaja com o menu**:
-   - Digite o número correspondente à operação desejada (`1` a `4`).
-   - Insira os dois números quando solicitado.
+   - Digite o número correspondente à operação desejada (`1` a `5`).
+   - Insira os valores quando solicitado.
    - Veja o resultado na tela.
    - Para encerrar, selecione a opção `0`.
 
@@ -65,6 +66,7 @@ python3 --version
 - [`subtrair(a, b)`](calculadora.py): Realiza a subtração entre dois valores.
 - [`multiplicar(a, b)`](calculadora.py): Calcula o produto de dois valores.
 - [`dividir(a, b)`](calculadora.py): Efetua a divisão, com validação para impedir divisão por zero.
+- [`porcentagem(valor, taxa)`](calculadora.py): Calcula o percentual de um valor base (ex: `15% de 200 = 30`).
 - [`calculadora()`](calculadora.py): Função principal que orquestra o menu, captura as opções do usuário e exibe as mensagens no terminal.
 
 ---
